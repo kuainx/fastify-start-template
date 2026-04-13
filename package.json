@@ -1,0 +1,44 @@
+{
+  "name": "fastify-start-template",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "KUAI",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src -e ts --exec ts-node --esm src/index.ts",
+    "build": "prisma generate && ncc build src/index.ts -o dist --minify && cmd /c \"xcopy /E /I /Y node_modules\\@fastify\\swagger-ui\\static dist\\static && copy prisma\\schema.prisma dist\\schema.prisma\"",
+    "start:dist": "node dist/index.js",
+    "lint": "oxlint",
+    "generate": "prisma generate",
+    "init:db": "prisma db push"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.4",
+    "fastify-plugin": "^5.1.0",
+    "fastify-type-provider-zod": "^6.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/sensible": "^6.0.4",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.5",
+    "@prisma/adapter-mariadb": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "@standard-config/oxlint": "^1.7.0",
+    "@types/node": "^25.6.0",
+    "@vercel/ncc": "^0.38.4",
+    "nodemon": "^3.1.14",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "oxlint-tsgolint": "^0.20.0",
+    "prisma": "^7.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.28.0"
+}
