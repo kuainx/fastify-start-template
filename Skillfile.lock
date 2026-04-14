@@ -1,0 +1,18 @@
+{
+  "github/skill/fastify": {
+    "sha": "3a5bd304cf5cdf75a997b03bb675121f4bbb365b",
+    "raw_url": "https://api.github.com/repos/mcollina/skills/contents/skills/fastify?ref=3a5bd304cf5cdf75a997b03bb675121f4bbb365b"
+  },
+  "github/skill/find-skills": {
+    "sha": "004c73806e35f3b12582967759559203c4ed01f9",
+    "raw_url": "https://api.github.com/repos/vercel-labs/skills/contents/skills/find-skills?ref=004c73806e35f3b12582967759559203c4ed01f9"
+  },
+  "github/skill/prisma-client-api": {
+    "sha": "741a74fdafc1bf61fa208c2f73878be688cba263",
+    "raw_url": "https://api.github.com/repos/prisma/skills/contents/prisma-client-api?ref=741a74fdafc1bf61fa208c2f73878be688cba263"
+  },
+  "github/skill/zod": {
+    "sha": "89c72d29a73de4ee62522114379bf574b8c3f68f",
+    "raw_url": "https://api.github.com/repos/pproenca/dot-skills/contents/skills/.curated/zod?ref=89c72d29a73de4ee62522114379bf574b8c3f68f"
+  }
+}

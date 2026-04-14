@@ -1,0 +1,13 @@
+# install  <platform>  <scope>
+install  antigravity  local
+
+# --- Skills ---
+# github  skill  [name]  <owner/repo>  <path-or-dir>  [ref]
+
+github  skill  mcollina/skills  skills/fastify
+
+github  skill  pproenca/dot-skills  skills/.curated/zod
+
+github  skill  prisma/skills  prisma-client-api
+
+github  skill  vercel-labs/skills  skills/find-skills
