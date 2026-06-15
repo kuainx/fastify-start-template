@@ -7,6 +7,7 @@ import {
 } from 'fastify-type-provider-zod'
 
 import type { FastifyInstance } from 'fastify'
+
 const zodPlugin = (fastify: FastifyInstance) => {
   fastify.setValidatorCompiler(validatorCompiler)
   fastify.setSerializerCompiler(serializerCompiler)

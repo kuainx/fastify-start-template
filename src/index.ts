@@ -8,15 +8,21 @@ import { jsonSchemaTransform } from 'fastify-type-provider-zod'
 
 import authPlugin from './plugins/auth.ts'
 import prismaPlugin from './plugins/prisma.ts'
+import replyPlugin from './plugins/reply.ts'
 import zodPlugin from './plugins/zod.ts'
 import authRoutes from './routes/auth.ts'
 import userRoutes from './routes/user.ts'
+import { debugRequestLoggerPlugin } from './plugins/log.ts'
 
 import type { ZodTypeProvider } from 'fastify-type-provider-zod'
+
 dotenv.config()
 
 const server = fastify({
   logger: true,
+  disableRequestLogging: true,
+  // loggerInstance: log,
+  // trustProxy: '172.18.0.0/16',
 }).withTypeProvider<ZodTypeProvider>()
 
 const start = async () => {
@@ -43,6 +49,8 @@ const start = async () => {
     })
 
     await server.register(zodPlugin)
+    await server.register(replyPlugin)
+    await server.register(debugRequestLoggerPlugin)
     await server.register(authPlugin)
     await server.register(prismaPlugin)
 

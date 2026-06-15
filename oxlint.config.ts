@@ -2,7 +2,7 @@ import { defineConfig } from '@standard-config/oxlint'
 // import { defineConfig } from 'oxlint'
 
 export default defineConfig({
-  ignorePatterns: ['**/mocap_to_robot.**'],
+  ignorePatterns: ['**/scripts/**'],
   rules: {
     'no-plusplus': 'off',
     'prefer-template': 'off',

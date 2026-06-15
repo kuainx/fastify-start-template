@@ -9,6 +9,5 @@ export type FastifyZodInstance =
     infer Logger,
     infer _
   >
-    ? // oxlint-disable-next-line typescript/no-unnecessary-type-arguments
-      FastifyInstance<RawServer, RawRequest, RawReply, Logger, ZodTypeProvider>
+    ? FastifyInstance<RawServer, RawRequest, RawReply, Logger, ZodTypeProvider>
     : never

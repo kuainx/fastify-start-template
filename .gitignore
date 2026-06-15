@@ -1,7 +1,8 @@
 node_modules
-prisma/generated
+src/prisma/generated
 dist
 .env
+fastify-api.zip
 
 # skillfile
 .skillfile/cache/
