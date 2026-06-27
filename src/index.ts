@@ -1,5 +1,4 @@
 import fastifyCookie from '@fastify/cookie'
-import fastifySensible from '@fastify/sensible'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUi from '@fastify/swagger-ui'
 import * as dotenv from 'dotenv'
@@ -28,7 +27,6 @@ const server = fastify({
 const start = async () => {
   try {
     // Register plugins
-    await server.register(fastifySensible)
     await server.register(fastifyCookie, {
       secret: process.env.COOKIE_SECRET ?? 'a-very-secret-secret',
     })
