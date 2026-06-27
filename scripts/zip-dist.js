@@ -1,4 +1,4 @@
-import archiver from 'archiver'
+import { ZipArchive } from 'archiver'
 
 import fs from 'fs'
 import path from 'path'
@@ -25,7 +25,7 @@ const filesToZip =
 
 const zipName = 'fastify-api.zip'
 const output = fs.createWriteStream(path.join(rootDir, zipName))
-const archive = archiver('zip', { zlib: { level: 9 } })
+const archive = new ZipArchive('zip', { zlib: { level: 9 } })
 
 output.on('close', () => {
   console.log(`Distribution package created: ${archive.pointer()} total bytes`)
